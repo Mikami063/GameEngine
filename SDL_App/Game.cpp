@@ -69,7 +69,7 @@ void Game::init(const char *title, int xpos, int ypos, int width, int height, bo
     
     //newPlayer.addComponent<PositionComponent>();
     //newPlayer.getComponent<PositionComponent>().setPos(500,500);
-    player.addComponent<TransformComponent>(100,0);//M4
+    player.addComponent<TransformComponent>(0,0);//M4
     player.addComponent<SpriteComponent>("assets/woman-idle/woman-idle-1.png");//M5
 }
 void Game::handleEvents(){
@@ -94,9 +94,14 @@ void Game::update(){
     */
     //player->Update();
     //enemy->Update();//GO4
+    
     manager.refresh();//M6
     manager.update();//M7
-    std::cout<<player.getComponent<TransformComponent>().x()<<","<<player.getComponent<TransformComponent>().y()<<std::endl;
+    player.getComponent<TransformComponent>().position.Add(Vector2D(5,0));
+    if(player.getComponent<TransformComponent>().position.x>500){
+        player.getComponent<SpriteComponent>().setTexture("assets/hat-man-idle/hat-man-idle-1.png");
+    }
+    //std::cout<<player.getComponent<TransformComponent>().x()<<","<<player.getComponent<TransformComponent>().y()<<std::endl;
 }
 void Game::render(){
     SDL_RenderClear(renderer);

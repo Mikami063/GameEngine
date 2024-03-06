@@ -13,6 +13,7 @@
 		BE0B63782B97EE2600180336 /* TextureManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BE0B63772B97EE2600180336 /* TextureManager.cpp */; };
 		BE0B637B2B97F07200180336 /* GameObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BE0B63792B97F07200180336 /* GameObject.cpp */; };
 		BE0B637E2B97FCA700180336 /* Map.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BE0B637C2B97FCA700180336 /* Map.cpp */; };
+		BE0B63882B99136A00180336 /* Vector2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BE0B63872B99136A00180336 /* Vector2D.cpp */; };
 		BE98CAAB2B97B23B00D763CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE98CAAA2B97B23B00D763CB /* Assets.xcassets */; };
 		BE98CAB02B97B23B00D763CB /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BE98CAAF2B97B23B00D763CB /* main.cpp */; };
 		BE98CAB92B97B2B400D763CB /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE98CAB82B97B2B400D763CB /* SDL2.framework */; };
@@ -48,6 +49,8 @@
 		BE0B63822B98418D00180336 /* Components.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Components.h; sourceTree = "<group>"; };
 		BE0B63842B98D83F00180336 /* TransformComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransformComponent.h; sourceTree = "<group>"; };
 		BE0B63852B98D8B000180336 /* SpriteComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpriteComponent.h; sourceTree = "<group>"; };
+		BE0B63862B9911FB00180336 /* Vector2D.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Vector2D.h; sourceTree = "<group>"; };
+		BE0B63872B99136A00180336 /* Vector2D.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Vector2D.cpp; sourceTree = "<group>"; };
 		BE98CAA12B97B23800D763CB /* SDL_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDL_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE98CAAA2B97B23B00D763CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE98CAAF2B97B23B00D763CB /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
@@ -114,6 +117,8 @@
 				BE0B63772B97EE2600180336 /* TextureManager.cpp */,
 				BE0B637C2B97FCA700180336 /* Map.cpp */,
 				BE0B637D2B97FCA700180336 /* Map.h */,
+				BE0B63862B9911FB00180336 /* Vector2D.h */,
+				BE0B63872B99136A00180336 /* Vector2D.cpp */,
 			);
 			path = SDL_App;
 			sourceTree = "<group>";
@@ -199,6 +204,7 @@
 			files = (
 				BE0B637B2B97F07200180336 /* GameObject.cpp in Sources */,
 				BE0B637E2B97FCA700180336 /* Map.cpp in Sources */,
+				BE0B63882B99136A00180336 /* Vector2D.cpp in Sources */,
 				BE98CAB02B97B23B00D763CB /* main.cpp in Sources */,
 				BE98CABE2B97C75E00D763CB /* Game.cpp in Sources */,
 				BE0B63782B97EE2600180336 /* TextureManager.cpp in Sources */,
