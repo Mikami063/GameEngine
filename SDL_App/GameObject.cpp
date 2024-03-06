@@ -10,7 +10,7 @@
 
 GameObject::GameObject(const char* textureSheet, int x, int y){
     //this->renderer=renderer;
-    objTexture=TextureManager::LoadTexture(textureSheet, renderer);
+    objTexture=TextureManager::LoadTexture(textureSheet);
     
     xpos=x;
     ypos=y;
