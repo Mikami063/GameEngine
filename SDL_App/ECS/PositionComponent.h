@@ -1,12 +1,12 @@
 //
-//  Components.h
+//  PositionComponent.h
 //  SDL_App
 //
 //  Created by Mikami Kirigaya on 2024-03-06.
 //
 
 #pragma once
-#include "ECS.h"
+#include "Components.h"
 
 class PositionComponent: public Component{
 private:
@@ -14,6 +14,14 @@ private:
     int ypos;
     
 public:
+    PositionComponent(){
+        xpos=0;
+        ypos=0;
+    }
+    PositionComponent(int x, int y){
+        xpos=x;
+        ypos=y;
+    }
     int x(){
         return xpos;
     }
@@ -21,10 +29,7 @@ public:
         return ypos;
     }
     
-    void init() override{
-        xpos=0;
-        ypos=0;
-    }
+    
     void update() override{
         xpos++;
         ypos++;

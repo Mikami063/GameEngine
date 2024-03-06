@@ -46,6 +46,8 @@
 		BE0B637D2B97FCA700180336 /* Map.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Map.h; sourceTree = "<group>"; };
 		BE0B63802B98114600180336 /* ECS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ECS.h; sourceTree = "<group>"; };
 		BE0B63822B98418D00180336 /* Components.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Components.h; sourceTree = "<group>"; };
+		BE0B63842B98D83F00180336 /* PositionComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PositionComponent.h; sourceTree = "<group>"; };
+		BE0B63852B98D8B000180336 /* SpriteComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpriteComponent.h; sourceTree = "<group>"; };
 		BE98CAA12B97B23800D763CB /* SDL_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDL_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE98CAAA2B97B23B00D763CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE98CAAF2B97B23B00D763CB /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
@@ -68,6 +70,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BE0B63832B9848D600180336 /* ECS */ = {
+			isa = PBXGroup;
+			children = (
+				BE0B63802B98114600180336 /* ECS.h */,
+				BE0B63822B98418D00180336 /* Components.h */,
+				BE0B63842B98D83F00180336 /* PositionComponent.h */,
+				BE0B63852B98D8B000180336 /* SpriteComponent.h */,
+			);
+			path = ECS;
+			sourceTree = "<group>";
+		};
 		BE98CA982B97B23800D763CB = {
 			isa = PBXGroup;
 			children = (
@@ -88,9 +101,10 @@
 		BE98CAA32B97B23800D763CB /* SDL_App */ = {
 			isa = PBXGroup;
 			children = (
+				BE0B63832B9848D600180336 /* ECS */,
+				BE0B63742B97E73600180336 /* assets */,
 				BE0B63792B97F07200180336 /* GameObject.cpp */,
 				BE0B637A2B97F07200180336 /* GameObject.h */,
-				BE0B63742B97E73600180336 /* assets */,
 				BE98CAAA2B97B23B00D763CB /* Assets.xcassets */,
 				BE98CAAF2B97B23B00D763CB /* main.cpp */,
 				BE98CAB12B97B23B00D763CB /* SDL_App.entitlements */,
@@ -100,8 +114,6 @@
 				BE0B63772B97EE2600180336 /* TextureManager.cpp */,
 				BE0B637C2B97FCA700180336 /* Map.cpp */,
 				BE0B637D2B97FCA700180336 /* Map.h */,
-				BE0B63802B98114600180336 /* ECS.h */,
-				BE0B63822B98418D00180336 /* Components.h */,
 			);
 			path = SDL_App;
 			sourceTree = "<group>";

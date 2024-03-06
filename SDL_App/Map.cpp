@@ -60,15 +60,15 @@ void Map::DrawMap(){
             
             switch (type) {
                 case 0:
-                    TextureManager::Draw(water, src, dest);
+                    TextureManager::Draw(water, &src, &dest);
                     break;
                     
                 case 1:
-                    TextureManager::Draw(grass, src, dest);
+                    TextureManager::Draw(grass, &src, &dest);
                     break;
                     
                 case 2:
-                    TextureManager::Draw(dirt, src, dest);
+                    TextureManager::Draw(dirt, &src, &dest);
                     break;
                     
                 default:

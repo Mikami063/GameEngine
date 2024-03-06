@@ -24,7 +24,7 @@ inline ComponentID getComponentTypeID(){
 }
 
 template <typename T> inline ComponentID getComponentTypeID() noexcept{
-    static ComponentID typeID = getComponentTypeID();
+    static ComponentID typeID{getComponentTypeID()};
     return typeID;//will this work?
 }
 
@@ -47,11 +47,13 @@ public:
         for(auto& c: components){
             c->update();
         }
+    }
+    void draw(){
         for(auto& c: components){
             c->draw();
         }
+        //SDL_Log("should not use this method");
     }
-    void draw(){}
     bool isActive() const{
         return active;
     }
