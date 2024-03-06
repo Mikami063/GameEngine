@@ -7,7 +7,7 @@
 
 #include "Game.h"
 #include "TextureManager.h"
-#include "GameObject.h"//GO1
+//#include "GameObject.h"//GO1
 #include "Map.h"
 
 #include "ECS.h"//M1
@@ -19,7 +19,7 @@ SDL_Texture* playerTex;
 SDL_Rect srcR, destR;
  */
 //GameObject* player;
-GameObject* enemy;//GO2
+//GameObject* enemy;//GO2
 Map* map;
 
 SDL_Renderer* Game::renderer=nullptr;
@@ -64,12 +64,12 @@ void Game::init(const char *title, int xpos, int ypos, int width, int height, bo
     playerTex=TextureManager::LoadTexture("assets/woman-idle/woman-idle-1.png", renderer);
     */
     //player=new GameObject("assets/woman-idle/woman-idle-1.png", 0, 0);
-    enemy=new GameObject("assets/hat-man-idle/hat-man-idle-1.png", 50, 50);//GO3
+    //enemy=new GameObject("assets/hat-man-idle/hat-man-idle-1.png", 50, 50);//GO3
     map=new Map();
     
     //newPlayer.addComponent<PositionComponent>();
     //newPlayer.getComponent<PositionComponent>().setPos(500,500);
-    player.addComponent<PositionComponent>(0,0);//M4
+    player.addComponent<TransformComponent>(100,0);//M4
     player.addComponent<SpriteComponent>("assets/woman-idle/woman-idle-1.png");//M5
 }
 void Game::handleEvents(){
@@ -93,10 +93,10 @@ void Game::update(){
     std::cout<<cnt<<std::endl;
     */
     //player->Update();
-    enemy->Update();//GO4
+    //enemy->Update();//GO4
     manager.refresh();//M6
     manager.update();//M7
-    std::cout<<player.getComponent<PositionComponent>().x()<<","<<player.getComponent<PositionComponent>().y()<<std::endl;
+    std::cout<<player.getComponent<TransformComponent>().x()<<","<<player.getComponent<TransformComponent>().y()<<std::endl;
 }
 void Game::render(){
     SDL_RenderClear(renderer);
@@ -105,7 +105,7 @@ void Game::render(){
     */
     map->DrawMap();
     //player->Render();
-    enemy->Render();//GO5
+    //enemy->Render();//GO5
     manager.draw();//M8
     SDL_RenderPresent(renderer);
 }
