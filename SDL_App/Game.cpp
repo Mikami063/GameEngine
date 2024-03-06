@@ -15,6 +15,9 @@ SDL_Texture* playerTex;
 SDL_Rect srcR, destR;
  */
 GameObject* player;
+GameObject* enemy;
+
+SDL_Renderer* Game::renderer=nullptr;
 
 Game::Game(){
     
@@ -51,7 +54,8 @@ void Game::init(const char *title, int xpos, int ypos, int width, int height, bo
     /*
     playerTex=TextureManager::LoadTexture("assets/woman-idle/woman-idle-1.png", renderer);
     */
-    player=new GameObject("assets/woman-idle/woman-idle-1.png", renderer, 0, 0);
+    player=new GameObject("assets/woman-idle/woman-idle-1.png", 0, 0);
+    enemy=new GameObject("assets/hat-man-idle/hat-man-idle-1.png", 50, 50);
 }
 void Game::handleEvents(){
     SDL_Event event;
@@ -74,6 +78,7 @@ void Game::update(){
     std::cout<<cnt<<std::endl;
     */
     player->Update();
+    enemy->Update();
 }
 void Game::render(){
     SDL_RenderClear(renderer);
@@ -81,6 +86,7 @@ void Game::render(){
     SDL_RenderCopy(renderer, playerTex, nullptr, &destR);
     */
     player->Render();
+    enemy->Render();
     SDL_RenderPresent(renderer);
 }
 void Game::clean(){
