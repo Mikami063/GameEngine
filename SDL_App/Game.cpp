@@ -10,6 +10,9 @@
 #include "GameObject.h"
 #include "Map.h"
 
+#include "ECS.h"
+#include "Components.h"
+
 
 /*
 SDL_Texture* playerTex;
@@ -20,6 +23,10 @@ GameObject* enemy;
 Map* map;
 
 SDL_Renderer* Game::renderer=nullptr;
+
+Manager manager;
+auto& newPlayer(manager.addEntity());
+
 
 Game::Game(){
     
@@ -59,6 +66,9 @@ void Game::init(const char *title, int xpos, int ypos, int width, int height, bo
     player=new GameObject("assets/woman-idle/woman-idle-1.png", 0, 0);
     enemy=new GameObject("assets/hat-man-idle/hat-man-idle-1.png", 50, 50);
     map=new Map();
+    
+    newPlayer.addComponent<PositionComponent>();
+    newPlayer.getComponent<PositionComponent>().setPos(500,500);
 }
 void Game::handleEvents(){
     SDL_Event event;
@@ -82,6 +92,8 @@ void Game::update(){
     */
     player->Update();
     enemy->Update();
+    manager.update();
+    std::cout<<newPlayer.getComponent<PositionComponent>().x()<<","<<newPlayer.getComponent<PositionComponent>().y()<<std::endl;
 }
 void Game::render(){
     SDL_RenderClear(renderer);

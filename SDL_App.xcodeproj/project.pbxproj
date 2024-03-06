@@ -45,6 +45,7 @@
 		BE0B637C2B97FCA700180336 /* Map.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Map.cpp; sourceTree = "<group>"; };
 		BE0B637D2B97FCA700180336 /* Map.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Map.h; sourceTree = "<group>"; };
 		BE0B63802B98114600180336 /* ECS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ECS.h; sourceTree = "<group>"; };
+		BE0B63822B98418D00180336 /* Components.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Components.h; sourceTree = "<group>"; };
 		BE98CAA12B97B23800D763CB /* SDL_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDL_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE98CAAA2B97B23B00D763CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE98CAAF2B97B23B00D763CB /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
@@ -100,6 +101,7 @@
 				BE0B637C2B97FCA700180336 /* Map.cpp */,
 				BE0B637D2B97FCA700180336 /* Map.h */,
 				BE0B63802B98114600180336 /* ECS.h */,
+				BE0B63822B98418D00180336 /* Components.h */,
 			);
 			path = SDL_App;
 			sourceTree = "<group>";
