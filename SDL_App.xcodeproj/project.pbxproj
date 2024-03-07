@@ -14,6 +14,7 @@
 		BE0B637B2B97F07200180336 /* GameObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BE0B63792B97F07200180336 /* GameObject.cpp */; };
 		BE0B637E2B97FCA700180336 /* Map.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BE0B637C2B97FCA700180336 /* Map.cpp */; };
 		BE0B63882B99136A00180336 /* Vector2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BE0B63872B99136A00180336 /* Vector2D.cpp */; };
+		BE0B638E2B99580900180336 /* Collision.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BE0B638D2B99580900180336 /* Collision.cpp */; };
 		BE98CAAB2B97B23B00D763CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE98CAAA2B97B23B00D763CB /* Assets.xcassets */; };
 		BE98CAB02B97B23B00D763CB /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BE98CAAF2B97B23B00D763CB /* main.cpp */; };
 		BE98CAB92B97B2B400D763CB /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE98CAB82B97B2B400D763CB /* SDL2.framework */; };
@@ -52,6 +53,9 @@
 		BE0B63862B9911FB00180336 /* Vector2D.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Vector2D.h; sourceTree = "<group>"; };
 		BE0B63872B99136A00180336 /* Vector2D.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Vector2D.cpp; sourceTree = "<group>"; };
 		BE0B638A2B993D4F00180336 /* KeyboardController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyboardController.h; sourceTree = "<group>"; };
+		BE0B638B2B9943F400180336 /* ColliderComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColliderComponent.h; sourceTree = "<group>"; };
+		BE0B638C2B99576300180336 /* Collision.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Collision.h; sourceTree = "<group>"; };
+		BE0B638D2B99580900180336 /* Collision.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Collision.cpp; sourceTree = "<group>"; };
 		BE98CAA12B97B23800D763CB /* SDL_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDL_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE98CAAA2B97B23B00D763CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE98CAAF2B97B23B00D763CB /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
@@ -82,6 +86,7 @@
 				BE0B63842B98D83F00180336 /* TransformComponent.h */,
 				BE0B63852B98D8B000180336 /* SpriteComponent.h */,
 				BE0B638A2B993D4F00180336 /* KeyboardController.h */,
+				BE0B638B2B9943F400180336 /* ColliderComponent.h */,
 			);
 			path = ECS;
 			sourceTree = "<group>";
@@ -121,6 +126,8 @@
 				BE0B637D2B97FCA700180336 /* Map.h */,
 				BE0B63862B9911FB00180336 /* Vector2D.h */,
 				BE0B63872B99136A00180336 /* Vector2D.cpp */,
+				BE0B638C2B99576300180336 /* Collision.h */,
+				BE0B638D2B99580900180336 /* Collision.cpp */,
 			);
 			path = SDL_App;
 			sourceTree = "<group>";
@@ -204,6 +211,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE0B638E2B99580900180336 /* Collision.cpp in Sources */,
 				BE0B637B2B97F07200180336 /* GameObject.cpp in Sources */,
 				BE0B637E2B97FCA700180336 /* Map.cpp in Sources */,
 				BE0B63882B99136A00180336 /* Vector2D.cpp in Sources */,

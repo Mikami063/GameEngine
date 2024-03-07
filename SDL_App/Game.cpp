@@ -12,6 +12,7 @@
 
 #include "ECS.h"//M1
 #include "Components.h"
+#include "Collision.h"
 
 
 /*
@@ -27,6 +28,7 @@ SDL_Event Game::event;
 
 Manager manager;//M2
 auto& player(manager.addEntity());//M3
+auto& wall(manager.addEntity());//will study later
 
 
 Game::Game(){
@@ -70,9 +72,14 @@ void Game::init(const char *title, int xpos, int ypos, int width, int height, bo
     
     //newPlayer.addComponent<PositionComponent>();
     //newPlayer.getComponent<PositionComponent>().setPos(500,500);
-    player.addComponent<TransformComponent>(0,0);//M4
+    player.addComponent<TransformComponent>(2);//M4
     player.addComponent<SpriteComponent>("assets/woman-idle/woman-idle-1.png");//M5
     player.addComponent<KeyboardController>();
+    player.addComponent<ColliderComponent>("player");
+    
+    wall.addComponent<TransformComponent>(300.0f,300.0f,300,20,1);
+    wall.addComponent<SpriteComponent>("assets/dirt.png");
+    wall.addComponent<ColliderComponent>("wall");
 }
 void Game::handleEvents(){
     
@@ -99,6 +106,10 @@ void Game::update(){
     
     manager.refresh();//M6
     manager.update();//M7
+    
+    if(Collision::AABB(player.getComponent<ColliderComponent>().collider, wall.getComponent<ColliderComponent>().collider)){
+        std::cout<< "Wall Hits!" <<std::endl;
+    }
     /*player.getComponent<TransformComponent>().position.Add(Vector2D(5,0));
     if(player.getComponent<TransformComponent>().position.x>500){
         player.getComponent<SpriteComponent>().setTexture("assets/hat-man-idle/hat-man-idle-1.png");

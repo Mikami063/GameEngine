@@ -62,7 +62,7 @@ public:
     }
     
     template <typename T> bool hasComponent() const{//why template?
-        return componentBitSet[getComponentTypeID<T>];
+        return componentBitSet[getComponentTypeID<T>()];//will study that, from youtube lesson 11 author comment
     }
     
     template <typename T,typename... TArgs>//will study this afterwards
