@@ -30,6 +30,7 @@ public:
     }
     
     static SDL_Renderer* renderer;
+    static SDL_Event event;//why don't use pointer here
 private:
     int cnt=0;
     bool isRunning;

@@ -23,6 +23,7 @@ SDL_Rect srcR, destR;
 Map* map;
 
 SDL_Renderer* Game::renderer=nullptr;
+SDL_Event Game::event;
 
 Manager manager;//M2
 auto& player(manager.addEntity());//M3
@@ -71,9 +72,10 @@ void Game::init(const char *title, int xpos, int ypos, int width, int height, bo
     //newPlayer.getComponent<PositionComponent>().setPos(500,500);
     player.addComponent<TransformComponent>(0,0);//M4
     player.addComponent<SpriteComponent>("assets/woman-idle/woman-idle-1.png");//M5
+    player.addComponent<KeyboardController>();
 }
 void Game::handleEvents(){
-    SDL_Event event;
+    
     SDL_PollEvent(&event);
     switch (event.type) {
         case SDL_QUIT:
@@ -97,10 +99,11 @@ void Game::update(){
     
     manager.refresh();//M6
     manager.update();//M7
-    player.getComponent<TransformComponent>().position.Add(Vector2D(5,0));
+    /*player.getComponent<TransformComponent>().position.Add(Vector2D(5,0));
     if(player.getComponent<TransformComponent>().position.x>500){
         player.getComponent<SpriteComponent>().setTexture("assets/hat-man-idle/hat-man-idle-1.png");
     }
+     */
     //std::cout<<player.getComponent<TransformComponent>().x()<<","<<player.getComponent<TransformComponent>().y()<<std::endl;
 }
 void Game::render(){

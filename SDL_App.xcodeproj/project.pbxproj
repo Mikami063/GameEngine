@@ -51,6 +51,7 @@
 		BE0B63852B98D8B000180336 /* SpriteComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpriteComponent.h; sourceTree = "<group>"; };
 		BE0B63862B9911FB00180336 /* Vector2D.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Vector2D.h; sourceTree = "<group>"; };
 		BE0B63872B99136A00180336 /* Vector2D.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Vector2D.cpp; sourceTree = "<group>"; };
+		BE0B638A2B993D4F00180336 /* KeyboardController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyboardController.h; sourceTree = "<group>"; };
 		BE98CAA12B97B23800D763CB /* SDL_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDL_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE98CAAA2B97B23B00D763CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE98CAAF2B97B23B00D763CB /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
@@ -80,6 +81,7 @@
 				BE0B63822B98418D00180336 /* Components.h */,
 				BE0B63842B98D83F00180336 /* TransformComponent.h */,
 				BE0B63852B98D8B000180336 /* SpriteComponent.h */,
+				BE0B638A2B993D4F00180336 /* KeyboardController.h */,
 			);
 			path = ECS;
 			sourceTree = "<group>";
@@ -104,13 +106,13 @@
 		BE98CAA32B97B23800D763CB /* SDL_App */ = {
 			isa = PBXGroup;
 			children = (
-				BE0B63832B9848D600180336 /* ECS */,
 				BE0B63742B97E73600180336 /* assets */,
+				BE0B63832B9848D600180336 /* ECS */,
+				BE98CAAA2B97B23B00D763CB /* Assets.xcassets */,
+				BE98CAB12B97B23B00D763CB /* SDL_App.entitlements */,
 				BE0B63792B97F07200180336 /* GameObject.cpp */,
 				BE0B637A2B97F07200180336 /* GameObject.h */,
-				BE98CAAA2B97B23B00D763CB /* Assets.xcassets */,
 				BE98CAAF2B97B23B00D763CB /* main.cpp */,
-				BE98CAB12B97B23B00D763CB /* SDL_App.entitlements */,
 				BE98CABC2B97C75E00D763CB /* Game.cpp */,
 				BE98CABD2B97C75E00D763CB /* Game.h */,
 				BE0B63762B97EBD900180336 /* TextureManager.h */,
