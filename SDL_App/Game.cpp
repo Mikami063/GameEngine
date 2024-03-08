@@ -26,9 +26,13 @@ Map* map;
 SDL_Renderer* Game::renderer=nullptr;
 SDL_Event Game::event;
 
+std::vector<ColliderComponent*> Game::colliders;//why should we declare things here, to make it global on this file? study
+
 Manager manager;//M2
 auto& player(manager.addEntity());//M3
 auto& wall(manager.addEntity());//will study later
+
+auto& tile0(manager.addEntity());
 
 
 Game::Game(){
@@ -70,6 +74,10 @@ void Game::init(const char *title, int xpos, int ypos, int width, int height, bo
     //enemy=new GameObject("assets/hat-man-idle/hat-man-idle-1.png", 50, 50);//GO3
     map=new Map();
     
+    
+    tile0.addComponent<TileComponent>(200,200,32,32,2);//T here only accept Components in Components.h, should be, study, and TArgs don't provide auto complete based on type, issue
+    tile0.addComponent<ColliderComponent>("grass");
+    
     //newPlayer.addComponent<PositionComponent>();
     //newPlayer.getComponent<PositionComponent>().setPos(500,500);
     player.addComponent<TransformComponent>(2);//M4
@@ -107,9 +115,17 @@ void Game::update(){
     manager.refresh();//M6
     manager.update();//M7
     
+    for (auto cc: colliders){//so the cc is a reference? i mean it don't copy data right?
+        if(Collision::AABB(player.getComponent<ColliderComponent>(), *cc)){//why deref cc and why not player.getComponent<ColliderComponent>.collider?, ok the ColliderComponent is the input type
+            std::cout<< "Wall Hits!"<< player.getComponent<ColliderComponent>().tag<< " 冤種 "<<cc->tag <<std::endl;
+        }
+    }
+    /*
     if(Collision::AABB(player.getComponent<ColliderComponent>().collider, wall.getComponent<ColliderComponent>().collider)){
+        player.getComponent<TransformComponent>().velocity*-1;//scale to -1
         std::cout<< "Wall Hits!" <<std::endl;
     }
+     */
     /*player.getComponent<TransformComponent>().position.Add(Vector2D(5,0));
     if(player.getComponent<TransformComponent>().position.x>500){
         player.getComponent<SpriteComponent>().setTexture("assets/hat-man-idle/hat-man-idle-1.png");
@@ -122,7 +138,7 @@ void Game::render(){
     /*
     SDL_RenderCopy(renderer, playerTex, nullptr, &destR);
     */
-    map->DrawMap();
+    //map->DrawMap();//tmp disable map
     //player->Render();
     //enemy->Render();//GO5
     manager.draw();//M8

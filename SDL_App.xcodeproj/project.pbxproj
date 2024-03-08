@@ -56,6 +56,7 @@
 		BE0B638B2B9943F400180336 /* ColliderComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColliderComponent.h; sourceTree = "<group>"; };
 		BE0B638C2B99576300180336 /* Collision.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Collision.h; sourceTree = "<group>"; };
 		BE0B638D2B99580900180336 /* Collision.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Collision.cpp; sourceTree = "<group>"; };
+		BE0B638F2B9A560000180336 /* TileComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TileComponent.h; sourceTree = "<group>"; };
 		BE98CAA12B97B23800D763CB /* SDL_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDL_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE98CAAA2B97B23B00D763CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE98CAAF2B97B23B00D763CB /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
@@ -87,6 +88,7 @@
 				BE0B63852B98D8B000180336 /* SpriteComponent.h */,
 				BE0B638A2B993D4F00180336 /* KeyboardController.h */,
 				BE0B638B2B9943F400180336 /* ColliderComponent.h */,
+				BE0B638F2B9A560000180336 /* TileComponent.h */,
 			);
 			path = ECS;
 			sourceTree = "<group>";

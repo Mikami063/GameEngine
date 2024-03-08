@@ -13,6 +13,10 @@
 
 #include "SDL2/SDL.h"
 #include "SDL2_image/SDL_image.h"
+#include <vector>
+
+class ColliderComponent;//forward declaration, do we need this?
+//we do need this
 
 class Game{
 public:
@@ -31,6 +35,7 @@ public:
     
     static SDL_Renderer* renderer;
     static SDL_Event event;//why don't use pointer here
+    static std::vector<ColliderComponent*> colliders;
 private:
     int cnt=0;
     bool isRunning;

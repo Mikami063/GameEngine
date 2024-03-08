@@ -21,12 +21,10 @@ public:
     int speed =3;
     
     TransformComponent(){
-        position.x=0.0f;
-        position.y=0.0f;
+        position.Zero();
     }
     TransformComponent(int scale){
-        position.x=0.0f;
-        position.y=0.0f;
+        position.Zero();
         this->scale=scale;
     }
     TransformComponent(float x, float y){
@@ -41,8 +39,7 @@ public:
         this->scale=scale;//study why this is a pointer
     }
     void init() override{//why can seperate like this, wtf is init and constructor in the same time, lame
-        velocity.x=0;
-        velocity.y=0;
+        velocity.Zero();
     }
     void update() override{
         position.x+=velocity.x*speed;

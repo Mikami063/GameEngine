@@ -10,6 +10,7 @@
 #include <string>
 #include "SDL2/SDL.h"
 //#include "ECS.h"//should need this line, but work without this line, strange xcode behaviour
+#include "Components.h"//is that circular include?
 
 class ColliderComponent: public Component{
 public:
@@ -28,6 +29,7 @@ public:
         }
         transform=&entity->getComponent<TransformComponent>();//save as pointer intead of reference, because [transform] is a pointer and you can't assign ref to pointer
         //and because it's a ref(the entity), so we use -> instead of .
+        Game::colliders.push_back(this);
         
     }
     void update() override{

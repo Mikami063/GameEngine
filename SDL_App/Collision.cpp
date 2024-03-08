@@ -6,6 +6,7 @@
 //
 
 #include "Collision.h"
+#include "ECS/ColliderComponent.h"
 
 bool Collision::AABB(const SDL_Rect &rectA, const SDL_Rect &rectB){
     if(rectA.x+rectA.w>=rectB.x &&
@@ -15,4 +16,8 @@ bool Collision::AABB(const SDL_Rect &rectA, const SDL_Rect &rectB){
         return true;
     }
     return false;
+}
+
+bool Collision::AABB(const ColliderComponent& c1, const ColliderComponent& c2){
+    return AABB(c1.collider, c2.collider);
 }
